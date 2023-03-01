@@ -22,7 +22,7 @@ const AllContracts = () => {
         <div className="flex flex-col items-center mt-9 ">
             {allContracts.map(contract=> {
                 return (
-                    <div className="max-w-md py-4 px-8 bg-blueGray-50 shadow-lg rounded-lg my-10">
+                    <div className="max-w-md py-4 px-8 bg-blue-50 shadow-lg rounded-lg my-10">
                         <div>
                             <h2 className="text-gray-800 text-3xl font-semibold">{contract.DENOMINATION}</h2>
                             <p className="mt-2 text-gray-600 mb-4">{contract.SIEGE_SOCIAL} </p>

@@ -25,25 +25,21 @@ const Form = () => {
 
     const SubmitForm = async (e) => {
         e.preventDefault();
-        try{
-            const response = await  axios.post("http://localhost:3001/contracts/submit", dataInfo)
+        try {
+            const response = await axios.post("http://localhost:3001/contracts/submit", dataInfo)
             navigate("/allcontracts")
             console.log(response)
+        } catch (e) {
+            console.log(e, 'error')
         }
-        catch(e) {
-            console.log(e,'error')
-        }
-
-
-
-
     }
 
 
+
     return (
-                <section className=" py-1 bg-blueGray-50">
+                <section className=" py-1  ">
                     <div className="w-full lg:w-8/12 px-4 mx-auto mt-10">
-                        <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
+                        <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blue-50 border-0">
                             <div className="rounded-t bg-white mb-0 px-6 py-6">
                                 <div className="text-center flex justify-between">
                                     <h6 className="text-blueGray-700 text-xl font-bold uppercase">
@@ -179,6 +175,7 @@ const Form = () => {
         )
 
 }
+
 
 
 export default Form;
